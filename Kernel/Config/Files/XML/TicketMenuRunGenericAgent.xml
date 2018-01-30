@@ -9,7 +9,7 @@
                 <Item Key="Name" Translatable="1">Run GenericAgent</Item>
                 <Item Key="Description" Translatable="1">Run GenericAgent</Item>
                 <Item Key="Action">AgentRunGenericAgent</Item>
-                <Item Key="Link">Action=AgentRunGenericAgent;GA=1</Item>
+                <Item Key="Link">Action=AgentRunGenericAgent;TicketID=[% Data.TicketID | html %];GA=1</Item>
                 <Item Key="LinkParam"></Item>
                 <Item Key="Target"></Item>
                 <Item Key="PopupType"></Item>
