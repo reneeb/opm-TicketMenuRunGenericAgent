@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="2.0" init="Application">
+    <Setting Name="Ticket::Frontend::MenuModule###212-RunGenericAgent" Required="0" Valid="0">
+        <Description Translatable="1">Shows a link in the ticket menu to run GenericAgent.</Description>
+        <Navigation>Frontend::Agent::View::TicketZoom::MenuModule</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::TicketMenu::Generic</Item>
+                <Item Key="Name" Translatable="1">Run GenericAgent</Item>
+                <Item Key="Description" Translatable="1">Run GenericAgent</Item>
+                <Item Key="Action">AgentRunGenericAgent</Item>
+                <Item Key="Link">Action=AgentRunGenericAgent;GA=1</Item>
+                <Item Key="LinkParam"></Item>
+                <Item Key="Target"></Item>
+                <Item Key="PopupType"></Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="TicketMenuRunGenericAgent::Runnable" Required="0" Valid="0">
+        <Description Translatable="1">Generic Agents that can be started by Agents.</Description>
+        <Navigation>Core::TicketMenuRunGenericAgent</Navigation>
+        <Value>
+            <Array>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="Frontend::Navigation###AgentRunGenericAgent###002-RunGenericAgent" Required="0" Valid="0">
+        <Description Translatable="1">Main menu item registration.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::MainMenu</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="Frontend::Module###AgentRunGenericAgent" Required="0" Valid="1">
+        <Description Translatable="1">Frontend module registration for GA runner</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration</Navigation>
+        <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="GroupRo">
+                    </Item>
+                    <Item Key="Group">
+                    </Item>
+                    <Item Key="Description" Translatable="1">Run GenericAgent.</Item>
+                    <Item Key="NavBarName">Ticket</Item>
+                    <Item Key="Title" Translatable="1">Run GenericAgent</Item>
+                </Hash>
+            </Item>
+        </Value>
+    </Setting>
+</otrs_config>
+
