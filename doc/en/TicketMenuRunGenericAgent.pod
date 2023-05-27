@@ -1,0 +1,28 @@
+=head1 TicketMenuRunGenericAgent
+
+This addon provides a new ticket menu item that can run a generic agent just for this ticket.
+
+=head2 Configuration
+
+After installation, you have to define the I<runnable> generic agents in the sysconfig
+(setting: I<TicketMenuRunGenericAgent::Runnable>) and activate the ticket menu module
+(setting: I<Ticket::Frontend::MenuModule###212-RunGenericAgent>).
+
+The last setting defines:
+
+=over 4
+
+=item * Name
+
+The link title shown in the ticket menu
+
+=item * Description
+
+The value that the agent sees when he/she hovers over the link
+
+=item * Link
+
+The value for the parameter I<GA> defines which GenericAgent should be run. The value has to be a GenericAgent name that was also added
+to the I<Runnable> list.
+
+=back
